@@ -1,0 +1,2 @@
+modules:
+  - from-file: nvidia/nvidia-flatpaks.yml

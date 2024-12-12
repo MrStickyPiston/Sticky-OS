@@ -1,0 +1,15 @@
+type: default-flatpaks
+system:
+    install:
+        - com.github.tchx84.Flatseal
+        - io.github.dvlv.boxbuddyrs
+
+        - io.gitlab.librewolf-community
+        - org.libreoffice.LibreOffice
+        - com.obsproject.Studio
+
+        - com.discordapp.Discord
+        - im.riot.Riot
+        - org.prismlauncher.PrismLauncher
+
+        - org.gtk.Gtk3theme.Breeze
