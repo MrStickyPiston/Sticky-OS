@@ -1,3 +1,5 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/modules/rpm-ostree.json
 type: rpm-ostree
 repos:
   - https://negativo17.org/repos/fedora-nvidia.repo
