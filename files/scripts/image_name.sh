@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -oue pipefail
 
-# Change os name to StickyOS in /usr/lib/os-release
+#### Change os name to StickyOS in /usr/lib/os-release
 
 IMAGE_DATE=$(date +%Y%m%d.%H)
 MAJOR_RELEASE_VERSION=$(grep -oP '[0-9]*' /etc/fedora-release)
