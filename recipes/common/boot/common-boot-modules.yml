@@ -1,0 +1,7 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+modules:
+  - type: script
+    snippets:
+      - "rm /usr/share/plymouth/themes/spinner/watermark.png"
+  - type: initramfs
