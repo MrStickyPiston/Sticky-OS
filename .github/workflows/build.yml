@@ -10,10 +10,20 @@ on:
 
   pull_request:
   workflow_dispatch: # allow manually triggering builds
+
 concurrency:
   # only run one build at a time
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
   cancel-in-progress: true
+
+env:
+  IMAGE_NAME: sticky-os
+  IMAGE_REPO: ghcr.io/mrstickypiston
+  IMAGE_TAG: latest
+  VERSION: 41
+  VARIANT: Kinoite
+
+
 jobs:
   bluebuild:
     name: Build Custom Image
@@ -25,19 +35,41 @@ jobs:
     strategy:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:
-        recipe:
-          # !! Add your recipes here
-          - recipe.yml
-          - recipe-nvidia.yml
+        # recipes/recipe[SUFFIX].yml
+        image_suffix: ["", "-nvidia"]
+
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
         with:
-          recipe: ${{ matrix.recipe }}
+          recipe: recipe${{ matrix.image_suffix }}.yml
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
 
-          # enabled by default, disable if your image is small and you want faster builds
-          maximize_build_space: true
+          # enable when build fails due to storage limit
+          maximize_build_space: false
+
+      - name: Build ISO
+        uses: jasonn3/build-container-installer@main
+        id: iso
+        with:
+          #arch: ${{ env.ARCH }}
+          image_name: ${{ env.IMAGE_NAME }}${{ matrix.image_suffix }}
+          image_repo: ${{ env.IMAGE_REPO }}
+          image_tag: ${{ env.IMAGE_TAG }}
+          version: ${{ env.VERSION }}
+          variant: ${{ env.VARIANT }}
+          iso_name: ${{ env.IMAGE_NAME }}${{ matrix.image_suffix }}-${{ env.IMAGE_TAG }}-${{ env.VERSION }}.iso
+
+      - name: Upload ISO as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.iso.outputs.iso_name }}
+          path: |
+            ${{ steps.iso.outputs.iso_path }}
+            ${{ steps.iso.outputs.iso_path }}-CHECKSUM
+          if-no-files-found: error
+          retention-days: 0
+          compression-level: 0
