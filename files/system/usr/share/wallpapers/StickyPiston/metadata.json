@@ -1,0 +1,13 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "mr.sticky.piston@gmail.com",
+                "Name": "StickyOS"
+            }
+        ],
+        "Id": "StickyPiston",
+        "License": "LGPLv3",
+        "Name": "Sticky Piston"
+    }
+}

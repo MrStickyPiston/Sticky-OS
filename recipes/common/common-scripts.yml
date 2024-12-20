@@ -2,4 +2,5 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/modules/script.json
 type: script
 scripts:
+  - symlinks.sh
   - image_name.sh

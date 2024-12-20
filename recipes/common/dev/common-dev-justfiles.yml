@@ -1,5 +1,0 @@
----
-# yaml-language-server: $schema=https://schema.blue-build.org/modules/justfiles.json
-type: justfiles
-include:
-  - dev/jetbrains-toolbox.just
