@@ -1,5 +1,0 @@
----
-# yaml-language-server: $schema=https://schema.blue-build.org/modules/script.json
-type: script
-scripts:
-  - jetbrains_toolbox.sh
