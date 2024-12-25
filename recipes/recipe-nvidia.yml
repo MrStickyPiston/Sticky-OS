@@ -12,5 +12,7 @@ image-version: 41 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - from-file: patches.yml
+  - from-file: nvidia/nvidia-modules.yml
   - from-file: common/common-modules.yml
-  - from-file: nvidia/nvidia-modules.yml 
+
