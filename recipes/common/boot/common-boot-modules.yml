@@ -4,4 +4,3 @@ modules:
   - type: script
     snippets:
       - "rm /usr/share/plymouth/themes/spinner/watermark.png"
-  - type: initramfs
