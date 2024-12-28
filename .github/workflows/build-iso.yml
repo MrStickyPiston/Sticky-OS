@@ -27,12 +27,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Lowercase repo
+        id: repo_case
+        uses: ASzc/change-string-case-action@d0603cd0a7dd490be678164909f65c7737470a7f # v6
+        with:
+          string: ${{ env.IMAGE_REPO }}
+
       - name: Build ISO
         uses: jasonn3/build-container-installer@main
         id: iso
         with:
           image_name: ${{ env.IMAGE_NAME }}${{ matrix.image_suffix }}
-          image_repo: ${{ env.IMAGE_REPO }}
+          image_repo: ${{ steps.repo_case.outputs.lowercase }}
           image_tag: ${{ env.IMAGE_TAG }}
           version: ${{ matrix.version }}
           variant: ${{ env.VARIANT }}
