@@ -1,0 +1,13 @@
+[General]
+ColorScheme=BreezeDark
+
+[Icons]
+Theme=breeze-dark
+
+[KDE]
+widgetStyle=Breeze
+LookAndFeelPackage=org.kde.breezedark.desktop
+
+[Sounds]
+Enable=false
+Theme=oxygen

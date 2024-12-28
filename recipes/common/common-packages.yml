@@ -6,3 +6,4 @@ remove:
   - firefox-langpacks
 install:
   - fastfetch
+  - oxygen-sounds
