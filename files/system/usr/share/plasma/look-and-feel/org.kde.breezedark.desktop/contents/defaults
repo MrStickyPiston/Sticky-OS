@@ -11,7 +11,7 @@ Theme=breeze-dark
 name=default
 
 [Wallpaper]
-Image=/usr/share/wallpapers/StickyPiston/
+Image=StickyPiston
 
 [kcminputrc][Mouse]
 cursorTheme=breeze_cursors
