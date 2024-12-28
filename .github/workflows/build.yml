@@ -16,14 +16,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
   cancel-in-progress: true
 
-env:
-  IMAGE_NAME: sticky-os
-  IMAGE_REPO: ghcr.io/mrstickypiston
-  IMAGE_TAG: latest
-  VERSION: 41
-  VARIANT: Kinoite
-
-
 jobs:
   bluebuild:
     name: Build Custom Image
@@ -50,26 +42,3 @@ jobs:
 
           # enable when build fails due to storage limit
           maximize_build_space: false
-
-      - name: Build ISO
-        uses: jasonn3/build-container-installer@main
-        id: iso
-        with:
-          #arch: ${{ env.ARCH }}
-          image_name: ${{ env.IMAGE_NAME }}${{ matrix.image_suffix }}
-          image_repo: ${{ env.IMAGE_REPO }}
-          image_tag: ${{ env.IMAGE_TAG }}
-          version: ${{ env.VERSION }}
-          variant: ${{ env.VARIANT }}
-          iso_name: ${{ env.IMAGE_NAME }}${{ matrix.image_suffix }}-${{ env.IMAGE_TAG }}-${{ env.VERSION }}.iso
-
-      - name: Upload ISO as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ steps.iso.outputs.iso_name }}
-          path: |
-            ${{ steps.iso.outputs.iso_path }}
-            ${{ steps.iso.outputs.iso_path }}-CHECKSUM
-          if-no-files-found: error
-          retention-days: 0
-          compression-level: 0
