@@ -4,6 +4,8 @@ type: rpm-ostree
 remove:
   - firefox
   - firefox-langpacks
+  - plasma-welcome
+  - plasma-welcome-fedora
 install:
   - fastfetch
   - oxygen-sounds
