@@ -4,3 +4,9 @@ type: script
 scripts:
   - symlinks.sh
   - image_name.sh
+snippets:
+  # Remove boot watermark
+  - "rm /usr/share/plymouth/themes/spinner/watermark.png"
+
+  # Hide fedora logo on sddm
+  - "sed -i 's/showlogo=shown/showlogo=hidden/' /usr/share/sddm/themes/01-breeze-fedora/theme.conf"
