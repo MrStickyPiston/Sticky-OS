@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=bash -c "/usr/bin/setup-vscode && rm ~/.config/autostart/setup-vscode.desktop"
+Icon=application-x-shellscript
+Name=setup-vscode
+Type=Application
+X-KDE-AutostartScript=true

@@ -1,7 +1,4 @@
 #!/usr/bin/sh
 
-# Jetbrains toolbox
-install-jetbrains-toolbox
-
 # VScode extensions
 code --install-extension ms-vscode-remote.remote-containers
