@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+distrobox stop vmware-view
+distrobox rm vmware-view
+distrobox assemble create --file /usr/share/distrobox/vmware-horizon.ini
