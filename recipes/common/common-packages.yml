@@ -6,6 +6,8 @@ remove:
   - firefox-langpacks
   - plasma-welcome
   - plasma-welcome-fedora
+  - plasma-discover-rpm-ostree
 install:
   - fastfetch
   - oxygen-sounds
+  - distrobox

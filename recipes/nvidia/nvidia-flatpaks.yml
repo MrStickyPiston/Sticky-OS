@@ -1,6 +1,0 @@
----
-# yaml-language-server: $schema=https://schema.blue-build.org/modules/default-flatpaks.json
-type: default-flatpaks
-system:
-  install:
-    - com.leinardi.gwe

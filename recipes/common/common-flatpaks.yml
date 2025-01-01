@@ -1,12 +1,13 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/modules/default-flatpaks.json
 type: default-flatpaks
+notify: true
 system:
     install:
         - com.github.tchx84.Flatseal
 
         # distrobox not installed, boxbuddy not needed
-        #- io.github.dvlv.boxbuddyrs
+        - io.github.dvlv.boxbuddyrs
 
         - io.gitlab.librewolf-community
         - org.libreoffice.LibreOffice
