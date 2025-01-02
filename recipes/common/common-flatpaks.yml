@@ -5,7 +5,6 @@ system:
     install:
         - com.github.tchx84.Flatseal
 
-        # distrobox not installed, boxbuddy not needed
         - io.github.dvlv.boxbuddyrs
 
         - io.gitlab.librewolf-community
