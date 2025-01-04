@@ -4,6 +4,7 @@ type: script
 scripts:
   - symlinks.sh
   - image_name.sh
+  - disable_autostarts.sh
 snippets:
   # Remove boot watermark
   - "rm /usr/share/plymouth/themes/spinner/watermark.png"
