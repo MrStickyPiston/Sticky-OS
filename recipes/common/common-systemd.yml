@@ -5,6 +5,8 @@ system:
   enabled:
     - rpm-ostreed-automatic.timer
     - flatpak-system-update.timer
+  masked:
+    - geoclue.service
 user:
   enabled:
     - flatpak-user-update.timer
