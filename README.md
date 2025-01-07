@@ -1,38 +1,71 @@
 # Sticky-OS &nbsp; [![bluebuild build badge](https://github.com/mrstickypiston/sticky-os/actions/workflows/build.yml/badge.svg)](https://github.com/mrstickypiston/sticky-os/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+An atomic Linux distro based on Fedora Kinoite optimized for productivity and ease of use.
 
-After setup, it is recommended you update this README to describe your custom image.
+## Features
+### System
+  - automatic system updates
+  - automatic app updates
+  - rollback updates
+  - uBlue kernel
+  - [secure boot support](#secure-boot)
+  - [nvidia driver support](#nvidia-drivers)
+  - kde plasma desktop
+  - disabled geoclue
+  - disabled discover notifications
+
+### Apps
+The default apps included out of the box on a new StickyOS installation. More apps can be installed using flatpak (flathub)
+#### Utility
+  - Flatseal
+  - Boxbuddy
+  - Konsole
+  - OBS studio
+
+#### Productivity
+  - Okular
+  - Librewolf
+  - Libreoffice
+  - Kwrite
+  - Horizon client (`install-vmware-horizon`)
+
+#### Development
+  - VScode
+    - devcontainers
+    - no telemtry
+    - custom interface
+    - autosave files
+    - git smart commit
+    - no confirm git sync
+    - automatic git fetch
+  - Jetbrains toolbox (`install-jetbrains-toolbox`)
+
+#### Social
+  - Discord
+  - Element (matrix client)
+
+### Appearance
+  - Breeze dark theme
+  - Sticky piston wallpaper
+  - Sticky piston profile picture
 
 ## Installation
+Download the corresponding ISO for your hardware from the latest [build-iso action run](https://github.com/MrStickyPiston/Sticky-OS/actions/workflows/build-iso.yml). When not using an Nvidia graphics card,use the `sticky-os-latest-XX.iso` ISO. 
+`sticky-os-nvidia-open-latest-XX.iso` is recommended for RTX series and later, for GTX series and below you should pick the
+`sticky-os-nvidia-latest-XX.iso`.
+When using an nvidia image, make sure to enable the [nvidia drivers](#nvidia-drivers).
 
-> **Warning**  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+### Secure boot
+To enable secure boot, run the following command and follow the instructions:
+```sh
+setup-secure-boot
+```
 
-To rebase an existing atomic Fedora installation to the latest build:
-
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/mrstickypiston/sticky-os:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/mrstickypiston/sticky-os:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
-
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
-
-## ISO
-
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+### Nvidia drivers
+To enable the nvidia drivers, run the following command:
+```sh
+setup-nvidia
+```
 
 ## Verification
 
