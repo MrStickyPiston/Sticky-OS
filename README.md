@@ -14,6 +14,7 @@ An atomic Linux distro based on Fedora Kinoite optimized for productivity and ea
   - disabled geoclue
   - disabled discover notifications
   - 1.1.1.1 dns resolution
+  - tailscale support
 
 ### Apps
 The default apps included out of the box on a new StickyOS installation. More apps can be installed using flatpak (flathub)
@@ -21,6 +22,7 @@ The default apps included out of the box on a new StickyOS installation. More ap
   - Flatseal
   - Boxbuddy
   - Konsole
+  - KTailctl
   - OBS studio
 
 #### Productivity

@@ -6,6 +6,7 @@ system:
         - com.github.tchx84.Flatseal
 
         - io.github.dvlv.boxbuddyrs
+        - org.fkoehler.KTailctl
 
         - org.kde.okular
         - io.gitlab.librewolf-community

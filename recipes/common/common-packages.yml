@@ -1,6 +1,8 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/modules/rpm-ostree.json
 type: rpm-ostree
+repos:
+  - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 remove:
   - firefox
   - firefox-langpacks
@@ -11,3 +13,4 @@ install:
   - fastfetch
   - oxygen-sounds
   - distrobox
+  - tailscale
