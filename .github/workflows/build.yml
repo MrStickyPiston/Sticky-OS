@@ -42,3 +42,6 @@ jobs:
 
           # enable when build fails due to storage limit
           maximize_build_space: false
+
+          # when getting weird permission issues in prod, disable this
+          rechunk: true
