@@ -5,3 +5,4 @@ repos:
   - https://packages.microsoft.com/yumrepos/vscode/config.repo
 install:
   - code
+  - rustup
