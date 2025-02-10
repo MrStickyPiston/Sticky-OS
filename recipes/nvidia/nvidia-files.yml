@@ -1,5 +1,5 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/modules/files.json
+# yaml-language-server: $schema=https://schema.blue-build.org/modules/files-latest.json
 type: files
 files:
   - source: nvidia/system

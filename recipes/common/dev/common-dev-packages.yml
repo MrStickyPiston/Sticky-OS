@@ -1,5 +1,5 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/modules/rpm-ostree.json
+# yaml-language-server: $schema=https://schema.blue-build.org/modules/rpm-ostree-latest.json
 type: rpm-ostree
 repos:
   - https://packages.microsoft.com/yumrepos/vscode/config.repo

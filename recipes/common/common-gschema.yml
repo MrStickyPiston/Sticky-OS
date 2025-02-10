@@ -1,5 +1,5 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/modules/gschema-overrides.json
+# yaml-language-server: $schema=https://schema.blue-build.org/modules/gschema-overrides-latest.json
 type: gschema-overrides
 include:
   - zz1-breezegtktheme.gschema.override
