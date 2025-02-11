@@ -8,7 +8,6 @@ system:
         - io.github.dvlv.boxbuddyrs
         - org.fkoehler.KTailctl
 
-        - org.kde.okular
         - io.gitlab.librewolf-community
         - org.libreoffice.LibreOffice
         - com.obsproject.Studio

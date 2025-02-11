@@ -14,3 +14,6 @@ install:
   - oxygen-sounds
   - distrobox
   - tailscale
+
+  - gwenview
+  - okular
