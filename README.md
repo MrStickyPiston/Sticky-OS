@@ -27,6 +27,7 @@ The default apps included out of the box on a new StickyOS installation. More ap
 
 #### Productivity
   - Okular
+  - Gwenview
   - Librewolf
     - softer version of resist fingerprinting that allows dark mode
     - keep download & browsing history
