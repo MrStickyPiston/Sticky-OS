@@ -16,5 +16,3 @@ system:
         - com.discordapp.Discord
         - im.riot.Riot
         - org.prismlauncher.PrismLauncher
-
-        - org.gtk.Gtk3theme.Breeze
