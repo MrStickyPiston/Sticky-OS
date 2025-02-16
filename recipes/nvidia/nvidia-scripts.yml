@@ -1,5 +1,5 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/modules/script.json
+# yaml-language-server: $schema=https://schema.blue-build.org/modules/script-latest.json
 type: script
 scripts:
   - installnvidiatoolkitpolicy.sh

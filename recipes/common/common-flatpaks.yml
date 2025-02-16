@@ -1,5 +1,5 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/modules/default-flatpaks.json
+# yaml-language-server: $schema=https://schema.blue-build.org/modules/default-flatpaks-latest.json
 type: default-flatpaks
 system:
     install:
@@ -8,7 +8,6 @@ system:
         - io.github.dvlv.boxbuddyrs
         - org.fkoehler.KTailctl
 
-        - org.kde.okular
         - io.gitlab.librewolf-community
         - org.libreoffice.LibreOffice
         - com.obsproject.Studio

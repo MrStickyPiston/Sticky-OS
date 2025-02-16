@@ -1,5 +1,5 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/modules/rpm-ostree.json
+# yaml-language-server: $schema=https://schema.blue-build.org/modules/rpm-ostree-latest.json
 type: rpm-ostree
 repos:
   - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
@@ -14,3 +14,6 @@ install:
   - oxygen-sounds
   - distrobox
   - tailscale
+
+  - gwenview
+  - okular
