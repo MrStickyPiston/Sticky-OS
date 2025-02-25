@@ -6,3 +6,4 @@ repos:
 install:
   - code
   - rustup
+  - gcc
