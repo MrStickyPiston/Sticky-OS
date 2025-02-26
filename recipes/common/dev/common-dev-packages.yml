@@ -7,3 +7,4 @@ install:
   - code
   - rustup
   - gcc
+  - openssl-devel
