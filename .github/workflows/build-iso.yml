@@ -14,14 +14,14 @@ env:
   VARIANT: Kinoite
 
 jobs:
-  build-containwr-installer:
+  build-container-installer:
     name: Build & upload ISO
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         image_suffix: ["", "-nvidia", "-nvidia-open"]
-        version: [41]
+        version: [42]
 
     steps:
       - name: Checkout repository
