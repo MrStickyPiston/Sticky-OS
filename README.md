@@ -13,7 +13,7 @@ An atomic Linux distro based on Fedora Kinoite optimized for productivity and ea
   - kde plasma desktop
   - disabled geoclue
   - disabled discover notifications
-  - 1.1.1.1 dns resolution
+  - 1.1.1.1 dns resolution (tls)
   - tailscale support
 
 ### Apps
@@ -31,7 +31,6 @@ The default apps included out of the box on a new StickyOS installation. More ap
   - Librewolf
     - softer version of resist fingerprinting that allows dark mode
     - keep download & browsing history
-    - enabled irefox sync
   - Libreoffice
   - Kwrite
   - Horizon client (`install-vmware-horizon`)
