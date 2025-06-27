@@ -3,6 +3,7 @@
 type: rpm-ostree
 repos:
   - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+  - https://pkg.cloudflareclient.com/cloudflare-warp-ascii.repo
 remove:
   - firefox
   - firefox-langpacks
@@ -14,6 +15,7 @@ install:
   - oxygen-sounds
   - distrobox
   - tailscale
+  - cloudflare-warp
 
   - gwenview
   - okular
