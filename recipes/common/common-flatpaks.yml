@@ -1,8 +1,9 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/modules/default-flatpaks-latest.json
 type: default-flatpaks
-system:
-    install:
+configurations:
+    - scope: system
+      install:
         - com.github.tchx84.Flatseal
 
         - io.github.dvlv.boxbuddyrs
