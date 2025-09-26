@@ -41,7 +41,7 @@ jobs:
           pr_event_number: ${{ github.event.number }}
 
           # enable when build fails due to storage limit
-          maximize_build_space: false
+          maximize_build_space: true
 
           # when getting weird permission issues in prod, disable this
           rechunk: true
